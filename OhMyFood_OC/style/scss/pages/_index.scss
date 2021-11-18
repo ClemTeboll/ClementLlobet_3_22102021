@@ -1,0 +1,43 @@
+.welcome-restaurant-operation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $first-clr;
+        color: $alternate-text-clr;
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -10px;
+        font-size: 12px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        @include darken-dark-clr;
+        padding: 6% 0% 6% 5%;
+        border-radius: 20px;
+        @include card-box-shadow;
+        &.store {
+            @include lighten-first-clr;
+        }
+        & i {
+            width: 50px;
+            margin-left: 5px;
+            font-size: 20px;
+            &.fa-store {
+                color: $first-clr;
+            }
+        }
+    }
+}

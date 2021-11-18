@@ -1,0 +1,83 @@
+.menu-bar {
+    max-width: 13%;
+    margin-left: 0px;
+    text-align: left;
+    border: 2px solid $third-clr;
+}
+
+.menu-card {
+    width: 100%;
+    background-color: $main-background-clr;
+    @include cursor;
+    @include card-box-shadow;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    &:not(:focus) {
+        top: 0px;
+        opacity: 1;
+        transition: all ease-in-out 1s;
+    }
+    &__infos {
+        padding: 15px;
+        width: 100%;
+        top: 10px;
+        opacity: 0;
+        & div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 15px;
+            & p.ingredient {
+                font-weight: lighter;
+            }
+            & p.price {
+                font-weight: bolder;
+            }
+        }
+        &:not(:focus) {
+            top: 0px;
+            opacity: 1;
+            transition: all ease-in-out 1s;
+        }
+    }
+    &:hover > &__infos {
+        width: 80%;
+        transition: all ease-in-out 0.3s;
+    }
+    &:hover > .circle-contenant {
+        transform: translate(-80px);
+		transition: all ease-in-out 0.3s;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $third-clr;
+        height: 100%;
+        & i {
+            font-size: 25px;
+            transform: rotate(360deg);
+            transition: all ease-in-out 0.5s;
+        }
+    }
+    & .circle-contenant {
+        position: absolute;
+        opacity: 0;
+        right: -80px;
+        bottom: 0;
+        margin-left: 2%;  
+        width: 20%;
+        border-radius: 0px 20px 20px 0px;
+        & i {
+            color: $alternate-text-clr;
+        }
+    }
+}

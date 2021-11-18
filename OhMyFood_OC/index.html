@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
+                utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
+                restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !" />
+        <link rel="shortcut icon" href="../images/logo/ohmyfood@2x.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">        
+        <script src="https://kit.fontawesome.com/627b1d90cf.js" crossorigin="anonymous"></script>
+        <title>ohmyfood - Accueil</title>
+    </head>
+    <body>
+        <div id="loading-spinner">
+            <span class="spinner"></span>
+        </div>
+        <header>
+            <h1 id="h1-welcome-page">
+                <img src="./images/logo/ohmyfood.png" alt="Logo d'OhMyFood">
+            </h1>
+            <div id="header-div-welcome-page">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Paris, Belleville</p>
+            </div>
+        </header>
+        <main>
+            <section id="welcome-booking">
+                <h2 class="h2-welcome-page">Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a class="styled-button" href="#welcome-restaurant">
+                    Explorez nos restaurants
+                </a>
+            </section>
+            <section id="welcome-operation">
+                <h2 class="h2-welcome-page">Fonctionnement</h2>
+                <div class="welcome-restaurant-operation">
+                    <div class="welcome-restaurant-operation__number">
+                        1
+                    </div>
+                    <div class="welcome-restaurant-operation__content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Choisissez votre restaurant</p>
+                    </div>
+                </div>
+                <div class="welcome-restaurant-operation">
+                    <div class="welcome-restaurant-operation__number">
+                        2
+                    </div>
+                    <div class="welcome-restaurant-operation__content">
+                        <i class="fas fa-list-ul"></i>
+                        <p>Composez votre menu</p>
+                    </div>
+                </div>
+                <div class="welcome-restaurant-operation">
+                    <div class="welcome-restaurant-operation__number">
+                        3
+                    </div>
+                    <div class="welcome-restaurant-operation__content store">
+                        <i class="fas fa-store"></i>
+                        <p>Dégustez au restaurant</p>
+                    </div> 
+                </div>
+            </section>
+            <section id="welcome-restaurant">
+                <h2 class="h2-welcome-page">Restaurants</h2>
+                <a href="./html/menu_la_palette_du_gout.html">
+                    <figure class="welcome-restaurant-card">
+                        <div>
+                            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt="Photo du restaurant La Palette du goût">
+                            <p class="new-card">Nouveau</p>
+                        </div>
+                        <figcaption>
+                            <div>
+                                <h3 class="h3-welcome-page">La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <i class="fas fa-heart"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="./html/menu_la_note_enchantee.html">
+                    <figure class="welcome-restaurant-card">
+                        <div>
+                            <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="Photo du restaurant La note enchantée">
+                            <p class="new-card">Nouveau</p>
+                        </div>
+                        <figcaption>
+                            <div>
+                                <h3 class="h3-welcome-page">La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <i class="fas fa-heart"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="./html/menu_a_la_francaise.html">
+                    <figure class="welcome-restaurant-card">
+                        <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                            alt="Photo du restaurant À la française">
+                        <figcaption>
+                            <div>
+                                <h3 class="h3-welcome-page">À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <i class="fas fa-heart"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="./html/menu_le_delice_des_sens.html">
+                    <figure class="welcome-restaurant-card">
+                        <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                            alt="Photo du restaurant Le délice des sens">
+                        <figcaption>
+                            <div>
+                                <h3 class="h3-welcome-page">Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <i class="fas fa-heart"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+            </section>
+        </main>
+        <footer>
+            <h2>
+                ohmyfood
+            </h2>
+            <div>
+                <a class="business-contact" href="mailto:contact@ohmyfood.com">
+                    <i class="fas fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </a>
+            </div>
+            <div>
+                <a class="business-contact" href="mailto:contact@ohmyfood.com">
+                    <i class="far fa-handshake"></i>
+                    <p>Devenir partenaire</p>
+                </a>
+            </div>
+            <div>
+                <p>
+                    <a href="#">
+                        Mentions légales
+                    </a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="mailto:contact@ohmyfood.com">
+                        Contact
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

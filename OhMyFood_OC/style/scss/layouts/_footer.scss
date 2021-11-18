@@ -1,0 +1,33 @@
+footer {
+    @include general-padding;
+    @include section-padding-top-and-bottom;
+    background-color: $dark-clr;
+    font-family: 'Roboto';
+    & h2 {
+        font-family: 'Shrikhand';
+        color: $alternate-text-clr;
+        font-size: 20px;
+        font-weight: lighter;
+        margin-bottom: 10px;
+    }
+    & div {
+        margin-bottom: 10px;
+        & a, p {
+            color: $alternate-text-clr;
+            &.business-contact {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            & i {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    & .fa-handshake {
+        transform: rotate(-40deg);
+        color: $alternate-text-clr;
+    }
+}

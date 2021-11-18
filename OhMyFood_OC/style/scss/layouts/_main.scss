@@ -1,0 +1,5 @@
+main.main-menu {
+    @include darken-dark-clr;
+    display: flex;
+    flex-direction: column;
+}
