@@ -1,9 +1,77 @@
-@keyframes progress-slog-spinner {
+@keyframes progress-logo-spinner {
     from {
-        transform: scaleX(1);
+        rotate: 0deg;
+        scale: 1;
+        visibility: visible;
     }
 
     to {
-        transform: scaleX(0);
+        rotate: 360deg;
+        scale: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes progress-spinner-animation {
+    0% {
+        scale: 0;
+        rotate: 0deg;
+        visibility: hidden;
+        width: 30px;
+        height: 10px;
+    }
+    50% {
+        scale: 1;
+        rotate: 360deg;
+        visibility: visible;
+    }
+    100% {
+        scale: 1;
+        rotate: 360deg;
+        visibility: visible;
+        width: 20px;
+        height: 120px;
+        border-radius: 0% 0% 40% 40%;
+    }
+}
+
+@keyframes progress-fork-prong {
+    0% {
+        position: relative;
+        bottom: 0;
+        border-radius: 0%;
+    }
+    100% {
+        position: relative;
+        bottom: 40px;
+        border-radius: 20% 20% 0% 0%;
+    }
+}
+
+@keyframes progress-little-fork-prong {
+    0% {
+        position: relative;
+        bottom: 0;
+        border-radius: 0%;
+    }
+    50% {
+        position: relative;
+        bottom: 60px;
+        border-radius: 0%;
+        border-radius: 20% 20% 0% 0%;
+    }
+    100% {
+        position: relative;
+        bottom: 30px;
+        border-radius: 20% 20% 0% 0%;
+    }
+}
+
+@keyframes progress-background-spinner {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

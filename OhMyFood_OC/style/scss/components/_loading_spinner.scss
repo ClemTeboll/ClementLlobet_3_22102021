@@ -12,14 +12,31 @@
         color: $alternate-text-clr;
         font-family: 'Shrikhand';
         font-size: 50px;
-        transform: scaleX(1);
-        animation-name: progress-logo-spinner;
-        animation-duration: 3000ms;
+        scale: 1;
+        visibility: visible;
+        animation: progress-logo-spinner 700ms 600ms forwards;
     }
     & .spinner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         width: 30px;
         height: 10px;
         background-color: $alternate-text-clr;
         visibility: hidden;
+        scale: 0;
+        animation: progress-spinner-animation 800ms 1200ms forwards;
+        & .fork {
+            background-color: $alternate-text-clr;
+            width: 4px;
+            height: 40px;
+            animation: progress-fork-prong 900ms 1900ms forwards;
+            &__tiny {
+                background-color: $alternate-text-clr;
+                width: 4px;
+                height: 60px;
+                animation: progress-little-fork-prong 900ms 1900ms forwards;
+            }
+        }
     }
 }
