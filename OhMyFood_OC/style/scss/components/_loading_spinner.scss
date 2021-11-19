@@ -1,0 +1,25 @@
+#loading-spinner {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    background: linear-gradient(to top left, $second-clr, $first-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .logo-spinner {
+        color: $alternate-text-clr;
+        font-family: 'Shrikhand';
+        font-size: 50px;
+        transform: scaleX(1);
+        animation-name: progress-logo-spinner;
+        animation-duration: 3000ms;
+    }
+    & .spinner {
+        width: 30px;
+        height: 10px;
+        background-color: $alternate-text-clr;
+        visibility: hidden;
+    }
+}
