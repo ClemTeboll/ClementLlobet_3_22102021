@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: progress-background-spinner 1000ms 2800ms forwards;
     & .logo-spinner {
         color: $alternate-text-clr;
         font-family: 'Shrikhand';
