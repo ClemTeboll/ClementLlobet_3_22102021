@@ -5,6 +5,10 @@
     border: 2px solid $third-clr;
 }
 
+article:nth-child(1n+0) {
+    animation: opacity-menu-articles 2000ms forwards;
+}
+
 .menu-card {
     width: 100%;
     background-color: $main-background-clr;
@@ -19,17 +23,9 @@
     align-items: stretch;
     position: relative;
     top: 10px;
-    opacity: 0;
-    &:not(:focus) {
-        top: 0px;
-        opacity: 1;
-        transition: all ease-in-out 1s;
-    }
     &__infos {
         padding: 15px;
         width: 100%;
-        top: 10px;
-        opacity: 0;
         & div {
             display: flex;
             flex-direction: row;
@@ -42,11 +38,6 @@
             & p.price {
                 font-weight: bolder;
             }
-        }
-        &:not(:focus) {
-            top: 0px;
-            opacity: 1;
-            transition: all ease-in-out 1s;
         }
     }
     &:hover > &__infos {

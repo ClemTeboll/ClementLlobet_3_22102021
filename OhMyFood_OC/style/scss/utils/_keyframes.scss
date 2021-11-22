@@ -77,3 +77,14 @@
         visibility: hidden;
     }
 }
+
+@keyframes opacity-menu-articles {
+    0% {
+        top: 10px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
