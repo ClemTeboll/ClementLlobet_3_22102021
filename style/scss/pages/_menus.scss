@@ -58,13 +58,10 @@ section {
         @include ellipsis-text;
     }
     &:hover > .circle-contenant {
-        transform: translate(-80px);
-		transition: all ease-in-out 0.3s;
-        opacity: 1;
+        animation: circle-contenant 300ms forwards;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $third-clr;
         height: 100%;
         & i {
             font-size: 25px;
@@ -80,8 +77,14 @@ section {
         margin-left: 2%;  
         width: 20%;
         border-radius: 0px 20px 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: reverse-circle-contenant 300ms forwards;
         & i {
             color: $alternate-text-clr;
+            transform: rotate(-360deg);
+            transition: all ease-in-out 0.3s;
         }
     }
 }
