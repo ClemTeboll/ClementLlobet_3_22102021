@@ -45,6 +45,7 @@ section {
             font-size: 15px;
             & p.ingredient {
                 font-weight: lighter;
+                @include ellipsis-text;
             }
             & p.price {
                 font-weight: bolder;
@@ -54,6 +55,7 @@ section {
     &:hover > &__infos {
         width: 80%;
         transition: all ease-in-out 0.3s;
+        @include ellipsis-text;
     }
     &:hover > .circle-contenant {
         transform: translate(-80px);
