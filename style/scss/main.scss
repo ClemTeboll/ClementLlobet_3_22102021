@@ -1,17 +1,21 @@
-@import './utils/variables';
-@import './utils/functions';
-@import './utils/mixins';
-@import './utils/keyframes';
-@import './base/fonts';
-@import './base/reset';
-@import './components/loading_spinner';
-@import './components/buttons';
-@import './components/fa-heart';
-@import './layouts/header';
-@import './layouts/main';
-@import './layouts/section';
-@import './layouts/titles';
-@import './layouts/footer';
-@import './layouts/texts';
-@import './pages/index';
-@import './pages/menus';
+@forward './utils/variables';
+@forward './utils/functions';
+@forward './utils/mixins';
+@forward './utils/keyframes';
+
+@forward './base/fonts';
+@forward './base/reset';
+
+@forward './components/loading_spinner';
+@forward './components/buttons';
+@forward './components/fa-heart';
+
+@forward './layouts/header';
+@forward './layouts/main';
+@forward './layouts/section';
+@forward './layouts/titles';
+@forward './layouts/footer';
+@forward './layouts/texts';
+
+@forward './pages/index';
+@forward './pages/menus';

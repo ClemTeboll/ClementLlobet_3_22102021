@@ -1,3 +1,7 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+
+
 @mixin section-padding-top-and-bottom {
     padding-bottom: 20px;
     padding-top: 20px;
@@ -19,26 +23,26 @@
 }
 
 @mixin card-box-shadow {
-    box-shadow: 0px 5px 10px $shadow-clr;
+    box-shadow: 0px 5px 10px v.$shadow-clr;
 }
 
-@mixin lighten-first-clr($color: manage-color($first-clr, $light-brightness, $first-percentage, $second-percentage, $third-percentage, $fourth-percentage)) {
+@mixin lighten-first-clr($color: f.manage-color(v.$first-clr, v.$light-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
     background-color: $color;
 }
 
-@mixin darken-third-clr($color: manage-color($third-clr, $dark-brightness, $first-percentage, $second-percentage, $third-percentage, $fourth-percentage)) {
+@mixin darken-third-clr($color: f.manage-color(v.$third-clr, v.$dark-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
     color: $color;
 }
 
-@mixin lighten-dark-clr($color: manage-color($dark-clr, $shadow-brightness, $first-percentage, $second-percentage, $third-percentage, $fourth-percentage)) {
+@mixin lighten-dark-clr($color: f.manage-color(v.$dark-clr, v.$shadow-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
     background-color: $color;
 }
 
-@mixin darken-dark-clr($color: manage-color($dark-clr, $dark-brightness, $first-percentage, $second-percentage, $third-percentage, $fourth-percentage)) {
+@mixin darken-dark-clr($color: f.manage-color(v.$dark-clr, v.$dark-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
     background-color: $color;
 }
 
-@mixin shadow-clr($color: manage-color($dark-clr, $shadow-brightness, $first-percentage, $second-percentage, $third-percentage, $fourth-percentage)) {
+@mixin shadow-clr($color: f.manage-color(v.$dark-clr, v.$shadow-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
     box-shadow: 0px 5px 10px $color;
 }
 

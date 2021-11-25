@@ -1,8 +1,11 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
 .menu-bar {
     max-width: 13%;
     margin-left: 0px;
     text-align: left;
-    border: 2px solid $third-clr;
+    border: 2px solid v.$third-clr;
 }
 
 section {
@@ -22,9 +25,9 @@ section {
 
 .menu-card {
     width: 100%;
-    background-color: $main-background-clr;
-    @include cursor;
-    @include card-box-shadow;
+    background-color: v.$main-background-clr;
+    @include m.cursor;
+    @include m.card-box-shadow;
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 20px;
@@ -45,7 +48,7 @@ section {
             font-size: 15px;
             & p.ingredient {
                 font-weight: lighter;
-                @include ellipsis-text;
+                @include m.ellipsis-text;
             }
             & p.price {
                 font-weight: bolder;
@@ -55,7 +58,7 @@ section {
     &:hover > &__infos {
         width: 80%;
         transition: all ease-in-out 0.3s;
-        @include ellipsis-text;
+        @include m.ellipsis-text;
     }
     &:hover > .circle-contenant {
         animation: circle-contenant 300ms forwards;
@@ -82,7 +85,7 @@ section {
         align-items: center;
         animation: reverse-circle-contenant 300ms forwards;
         & i {
-            color: $alternate-text-clr;
+            color: v.$alternate-text-clr;
             transform: rotate(-360deg);
             transition: all ease-in-out 0.3s;
         }

@@ -1,3 +1,6 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
 .welcome-restaurant-operation {
     display: flex;
     flex-direction: row;
@@ -9,8 +12,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $first-clr;
-        color: $alternate-text-clr;
+        background-color: v.$first-clr;
+        color: v.$alternate-text-clr;
         border-radius: 50px;
         width: 20px;
         height: 20px;
@@ -24,19 +27,19 @@
         justify-content: start;
         align-items: center;
         width: 100%;
-        @include darken-dark-clr;
+        @include m.darken-dark-clr;
         padding: 6% 0% 6% 5%;
         border-radius: 20px;
-        @include card-box-shadow;
+        @include m.card-box-shadow;
         &.store {
-            @include lighten-first-clr;
+            @include m.lighten-first-clr;
         }
         & i {
             width: 50px;
             margin-left: 5px;
             font-size: 20px;
             &.fa-store {
-                color: $first-clr;
+                color: v.$first-clr;
             }
         }
     }

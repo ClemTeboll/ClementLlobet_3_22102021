@@ -1,30 +1,33 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
 // ACCUEIL
 
 #welcome-booking {
     text-align: center;
-    @include general-padding;
-    @include darken-dark-clr;
+    @include m.general-padding;
+    @include m.darken-dark-clr;
     display: flex;
     flex-direction: column;
     & p {
         font-weight: lighter;
-        color: $shadow-clr;
+        color: v.$shadow-clr;
         line-height: 15px;
         line-height: 1.5;
     }
 }
 
 #welcome-operation {
-    @include general-padding;
+    @include m.general-padding;
     padding-top: 20px;
     padding-bottom: 30px;
-    @include section-padding-top-and-bottom;
+    @include m.section-padding-top-and-bottom;
 }
 
 #welcome-restaurant {
-    @include general-padding;
-    @include darken-dark-clr;
-    @include section-padding-top-and-bottom;
+    @include m.general-padding;
+    @include m.darken-dark-clr;
+    @include m.section-padding-top-and-bottom;
     & a {
         width: 100%;
     }
@@ -36,8 +39,8 @@
 .welcome-restaurant-card {
     border-radius: 20px;
     margin-bottom: 20px;
-    @include darken-dark-clr;
-    box-shadow: 0px 5px 10px $shadow-clr;
+    @include m.darken-dark-clr;
+    box-shadow: 0px 5px 10px v.$shadow-clr;
     position: relative;
     & img {
         width: 100%;
@@ -47,11 +50,11 @@
         border-radius: 20px 20px 0px 0px;
     }
     .new-card {
-        @include flex-center-center;
+        @include m.flex-center-center;
         width: 20%;
         padding: 5px;
-        background-color: $third-clr;
-        @include darken-third-clr;
+        background-color: v.$third-clr;
+        @include m.darken-third-clr;
         position: absolute;
         top: 20px;
         right: 20px;
@@ -63,7 +66,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 5%;
-        background-color: $main-background-clr;
+        background-color: v.$main-background-clr;
         border-radius: 0px 0px 20px 20px;
         & p {
             font-size: 16px;
@@ -73,9 +76,9 @@
 }
 
 #welcome-operation {
-    @include general-padding;
+    @include m.general-padding;
     width: 100%;
-    background-color: $main-background-clr;
+    background-color: v.$main-background-clr;
 }
 
 // MENUS
@@ -100,7 +103,7 @@
         z-index: 1;
         margin-top: 150px;
         padding-top: 50px;
-        @include darken-dark-clr;
+        @include m.darken-dark-clr;
         border-radius: 50px 50px 0px 0px;
         display: flex;
         flex-direction: row;
@@ -110,5 +113,5 @@
 }
 
 .starters, .courses, .desserts {
-    @include darken-dark-clr;
+    @include m.darken-dark-clr;
 }

@@ -1,11 +1,14 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
 footer {
-    @include general-padding;
-    @include section-padding-top-and-bottom;
-    background-color: $dark-clr;
+    @include m.general-padding;
+    @include m.section-padding-top-and-bottom;
+    background-color: v.$dark-clr;
     font-family: 'Roboto';
     & h2 {
         font-family: 'Shrikhand';
-        color: $alternate-text-clr;
+        color: v.$alternate-text-clr;
         font-size: 20px;
         font-weight: lighter;
         margin-bottom: 10px;
@@ -13,7 +16,7 @@ footer {
     & div {
         margin-bottom: 10px;
         & a, p {
-            color: $alternate-text-clr;
+            color: v.$alternate-text-clr;
             &.business-contact {
                 display: flex;
                 flex-direction: row;
@@ -28,6 +31,6 @@ footer {
 
     & .fa-handshake {
         transform: rotate(-40deg);
-        color: $alternate-text-clr;
+        color: v.$alternate-text-clr;
     }
 }
