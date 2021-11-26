@@ -3,36 +3,66 @@
 
 // ACCUEIL
 
-#welcome-booking {
+section#welcome-booking {
     text-align: center;
     @include m.general-padding;
     @include m.darken-dark-clr;
     display: flex;
     flex-direction: column;
+    @include m.desktop-only {
+        width: 50%;
+        padding: 1% 3% 0% 3%;
+        margin: 20px 0px 20px 0px;
+    }
     & p {
         font-weight: lighter;
         color: v.$shadow-clr;
         line-height: 15px;
         line-height: 1.5;
+        @include m.desktop-only {
+            text-align: left;
+        }
+
     }
 }
 
-#welcome-operation {
+section#welcome-operation {
     @include m.general-padding;
     padding-top: 20px;
     padding-bottom: 30px;
     @include m.section-padding-top-and-bottom;
+    @include m.desktop-only {
+        width: 50%;
+        padding: 1% 3% 0% 3%;
+        margin: 20px 0px 20px 0px;
+    }
 }
 
 #welcome-restaurant {
     @include m.general-padding;
     @include m.darken-dark-clr;
     @include m.section-padding-top-and-bottom;
+    @include m.desktop-only {
+        width: 100%;
+    }
     & a {
         width: 100%;
+        @include m.desktop-only {
+            width: 45%;
+            margin-bottom: 20px;
+        }
     }
     & h2 {
         margin-bottom: 10px;
+    }
+    & div#all-restaurants {
+        @include m.desktop-only {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
     }
 }
 

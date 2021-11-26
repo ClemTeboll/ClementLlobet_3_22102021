@@ -8,6 +8,10 @@
     margin-top: 20px;
     margin-bottom: 20px;
     position: relative;
+    @include m.desktop-only {
+        width: 100%;
+        padding-left: 2%;
+    }
     &__number {
         display: flex;
         justify-content: center;
@@ -20,6 +24,9 @@
         position: absolute;
         left: -10px;
         font-size: 12px;
+        @include m.desktop-only {
+            left: -5px;
+        }
     }
     &__content {
         display: flex;

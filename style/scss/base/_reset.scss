@@ -1,3 +1,5 @@
+@use '../utils/mixins' as m;
+
 * {
     box-sizing: border-box;
 }
@@ -30,6 +32,17 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	@include m.desktop-only {
+		max-width: 1440px;
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: auto;
+	}
+	@include m.tablet-only {
+		max-width: 968px;
+	}
 }
 a {
 	text-decoration: none;

@@ -13,9 +13,18 @@ header {
         &#h1-welcome-page {
             box-shadow: 0px 0px 10px v.$shadow-clr;
             margin-bottom: 5px;
+            @include m.desktop-only {
+                margin-bottom: 0px;
+            }
         }
         & img {
             width: 200px;
+            @include m.desktop-only {
+                width: 300px;
+            }
+        }
+        @include m.desktop-only {
+            height: 150px
         }
     } 
     & #header-div-welcome-page {
@@ -26,6 +35,12 @@ header {
         & i {
             margin-right: 10px;
         }
+        @include m.desktop-only {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: v.$main-background-clr;
+        }
     }
     & #header-nav-menu-page {
         position: absolute;
@@ -34,5 +49,8 @@ header {
         & i.fa-arrow-left {
             font-size: 20px;
         }
+    }
+    @include m.desktop-only {
+        position: relative;
     }
 }

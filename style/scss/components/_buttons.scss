@@ -7,9 +7,7 @@ a.styled-button {
     margin: auto;
     margin-top: 30px;
     margin-bottom: 40px;
-    padding: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 15px 20px 15px 20px;
     border: none;
     border-radius: 40px;
     box-shadow: 0px 5px 10px v.$shadow-clr;
@@ -18,6 +16,11 @@ a.styled-button {
     color: v.$alternate-text-clr;
     font-weight: lighter;
     opacity: 1;
+    @include m.desktop-only {
+        width: 300px;
+        padding: 15px 10px 15px 10px;
+        font-size: 18px;
+    }
     &:hover {
         @include m.cursor;
         opacity: 0.9;

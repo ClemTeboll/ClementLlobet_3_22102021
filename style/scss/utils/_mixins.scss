@@ -51,3 +51,15 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@mixin desktop-only {
+    @media screen and (min-width: v.$tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media screen and (min-width: v.$mobile-breakpoint) and (max-width: v.$tablet-breakpoint) {
+        @content;
+    }
+}

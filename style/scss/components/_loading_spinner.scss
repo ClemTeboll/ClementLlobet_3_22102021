@@ -1,4 +1,5 @@
 @use '../utils/variables' as v;
+@use '../utils/mixins' as m;
 
 #loading-spinner {
     height: 100vh;
@@ -11,11 +12,15 @@
     justify-content: center;
     align-items: center;
     animation: progress-background-spinner 1000ms 2800ms forwards;
+    @include m.desktop-only {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
     & .logo-spinner {
         color: v.$alternate-text-clr;
         font-family: 'Shrikhand';
         font-size: 50px;
-        scale: 1;
         visibility: visible;
         animation: progress-logo-spinner 700ms 600ms forwards;
     }
@@ -27,7 +32,6 @@
         height: 10px;
         background-color: v.$alternate-text-clr;
         visibility: hidden;
-        scale: 0;
         animation: progress-spinner-animation 800ms 1200ms forwards;
         & .fork {
             background-color: v.$alternate-text-clr;

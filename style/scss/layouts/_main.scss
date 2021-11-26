@@ -1,7 +1,15 @@
 @use '../utils/mixins' as m;
 
-main.main-menu {
-    @include m.darken-dark-clr;
-    display: flex;
-    flex-direction: column;
+main {
+    &.main-menu {
+        @include m.darken-dark-clr;
+        display: flex;
+        flex-direction: column;
+    }
+    @include m.desktop-only {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }

@@ -3,15 +3,11 @@
 @keyframes progress-logo-spinner {
     0% {
         transform: rotate(0deg) scale(1);
-        rotate: 0deg;
-        scale: 1;
         visibility: visible;
     }
 
     100% {
         transform: rotate(360deg) scale(0);
-        rotate: 360deg;
-        scale: 0;
         visibility: hidden;
     }
 }
@@ -19,22 +15,16 @@
 @keyframes progress-spinner-animation {
     0% {
         transform: rotate(0deg) scale(0);
-        rotate: 0deg;
-        scale: 0;
         visibility: hidden;
         width: 30px;
         height: 10px;
     }
     50% {
         transform: rotate(360deg) scale(1);
-        rotate: 360deg;
-        scale: 1;
         visibility: visible;
     }
     100% {
         transform: rotate(360deg) scale(1);
-        rotate: 360deg;
-        scale: 1;
         visibility: visible;
         width: 20px;
         height: 120px;
