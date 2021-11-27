@@ -42,6 +42,7 @@ body {
 	}
 	@include m.tablet-only {
 		max-width: 968px;
+		width: 100%;
 	}
 }
 a {

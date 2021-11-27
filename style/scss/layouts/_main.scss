@@ -7,11 +7,23 @@ main {
         justify-content: space-between;
         flex-wrap: wrap;
     }
+    @include m.tablet-only {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     &.main-menu {
         @include m.darken-dark-clr;
         display: flex;
         flex-direction: column;
         @include m.desktop-only {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        @include m.tablet-only {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;

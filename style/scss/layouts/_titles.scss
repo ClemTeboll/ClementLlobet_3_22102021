@@ -10,6 +10,10 @@ h2 {
             width: 100%;
             text-align: left;
         }
+        @include m.tablet-only {
+            width: 100%;
+            text-align: left;
+        }
     }
     &.h2-title-menu-page {
         font-family: 'Shrikhand';
@@ -27,6 +31,11 @@ h3 {
         font-weight: lighter;
         text-transform: uppercase;
         @include m.desktop-only {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        @include m.tablet-only {
             font-size: 20px;
             text-align: center;
             width: 100%;
