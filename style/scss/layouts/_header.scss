@@ -4,6 +4,9 @@
 header {
     width: 100%;
     background-color: v.$main-background-clr;
+    @include m.desktop-only {
+        position: relative;
+    }
     & h1 {
         text-align: center;
         background-color: v.$main-background-clr;
@@ -46,11 +49,13 @@ header {
         position: absolute;
         top: 25px;
         left: 20px;
+        @include m.desktop-only {
+            top: 60px;        }
         & i.fa-arrow-left {
             font-size: 20px;
+            @include m.desktop-only {
+                font-size: 30px;
+            }
         }
-    }
-    @include m.desktop-only {
-        position: relative;
     }
 }

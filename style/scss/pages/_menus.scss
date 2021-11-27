@@ -6,6 +6,10 @@
     margin-left: 0px;
     text-align: left;
     border: 2px solid v.$third-clr;
+    @include m.desktop-only {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 section {

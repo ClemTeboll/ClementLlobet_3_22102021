@@ -26,6 +26,11 @@ h3 {
     &.h3-menu-page {
         font-weight: lighter;
         text-transform: uppercase;
+        @include m.desktop-only {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
     } 
 }
 
