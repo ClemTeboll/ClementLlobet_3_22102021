@@ -63,6 +63,25 @@ section {
             }
         }
     }
+    @include m.desktop-only {
+        &:hover > &__infos {
+            width: 80%;
+            transition: all ease-in-out 0.3s;
+            @include m.ellipsis-text;
+        }
+        &:hover > .circle-contenant {
+            animation: circle-contenant 300ms forwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            & i {
+                font-size: 25px;
+                transform: rotate(360deg);
+                transition: all ease-in-out 0.5s;
+            }
+        }
+    }
     &:active > &__infos {
         width: 80%;
         transition: all ease-in-out 0.3s;
