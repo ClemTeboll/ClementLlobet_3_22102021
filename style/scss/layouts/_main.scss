@@ -17,6 +17,7 @@ main {
         @include m.darken-dark-clr;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         @include m.desktop-only {
             flex-direction: row;
             justify-content: space-between;

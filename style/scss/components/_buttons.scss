@@ -16,6 +16,7 @@ a.styled-button {
     color: v.$alternate-text-clr;
     font-weight: lighter;
     opacity: 1;
+    transition: all 250ms;
     @include m.desktop-only {
         width: 300px;
         padding: 15px 10px 15px 10px;

@@ -45,6 +45,7 @@ section {
     align-items: stretch;
     position: relative;
     top: 10px;
+    overflow: hidden;
     &__infos {
         padding: 15px;
         width: 100%;

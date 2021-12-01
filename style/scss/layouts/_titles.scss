@@ -8,11 +8,11 @@ h2 {
         @include m.section-padding-top-and-bottom;
         @include m.desktop-only {
             width: 100%;
-            text-align: left;
+            text-align: center;
         }
         @include m.tablet-only {
             width: 100%;
-            text-align: left;
+            text-align: center;
         }
     }
     &.h2-title-menu-page {
