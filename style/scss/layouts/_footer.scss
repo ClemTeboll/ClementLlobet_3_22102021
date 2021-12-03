@@ -1,0 +1,37 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+footer {
+    @include m.general-padding;
+    @include m.section-padding-top-and-bottom;
+    background-color: v.$dark-clr;
+    font-family: 'Roboto';
+    & h2 {
+        font-family: 'Shrikhand';
+        color: v.$alternate-text-clr;
+        font-size: 20px;
+        font-weight: lighter;
+        margin-bottom: 10px;
+    }
+    & div {
+        margin-bottom: 10px;
+        & a, p {
+            color: v.$alternate-text-clr;
+            &.business-contact {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            & i {
+                margin-right: 15px;
+                width: 10px;
+            }
+        }
+    }
+
+    & .fa-handshake {
+        transform: rotate(-40deg);
+        color: v.$alternate-text-clr;
+    }
+}

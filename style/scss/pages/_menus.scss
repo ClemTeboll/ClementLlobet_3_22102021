@@ -1,0 +1,121 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+.menu-bar {
+    max-width: 13%;
+    margin-left: 0px;
+    text-align: left;
+    border: 2px solid v.$third-clr;
+    @include m.desktop-only {
+        width: 100%;
+        max-width: 100%;
+    }
+    @include m.tablet-only {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+section {
+    &:nth-child(2) {
+        opacity: 0;
+        animation: opacity-menu-articles 2000ms forwards;
+    }
+    &:nth-child(3) {
+        opacity: 0;
+        animation: opacity-menu-articles 2000ms 500ms forwards;
+    }
+    &:nth-child(4) {
+        opacity: 0;
+        animation: opacity-menu-articles 2000ms 1000ms forwards;
+    }
+}
+
+.menu-card {
+    width: 100%;
+    background-color: v.$main-background-clr;
+    @include m.cursor;
+    @include m.card-box-shadow;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+    &__infos {
+        padding: 15px;
+        width: 100%;
+        & div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 15px;
+            & p.ingredient {
+                font-weight: lighter;
+                @include m.ellipsis-text;
+            }
+            & p.price {
+                font-weight: bolder;
+            }
+        }
+    }
+    @include m.desktop-only {
+        &:hover > &__infos {
+            width: 80%;
+            transition: all ease-in-out 0.3s;
+            @include m.ellipsis-text;
+        }
+        &:hover > .circle-contenant {
+            animation: circle-contenant 300ms forwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            & i {
+                font-size: 25px;
+                transform: rotate(360deg);
+                transition: all ease-in-out 0.5s;
+            }
+        }
+    }
+    &:active > &__infos {
+        width: 80%;
+        transition: all ease-in-out 0.3s;
+        @include m.ellipsis-text;
+    }
+    &:active > .circle-contenant {
+        animation: circle-contenant 300ms forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        & i {
+            font-size: 25px;
+            transform: rotate(360deg);
+            transition: all ease-in-out 0.5s;
+        }
+    }
+    & .circle-contenant {
+        position: absolute;
+        opacity: 0;
+        right: -80px;
+        bottom: 0;
+        margin-left: 2%;  
+        width: 20%;
+        border-radius: 0px 20px 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: reverse-circle-contenant 300ms forwards;
+        & i {
+            color: v.$alternate-text-clr;
+            transform: rotate(-360deg);
+            transition: all ease-in-out 0.3s;
+        }
+    }
+}

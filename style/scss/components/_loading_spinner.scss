@@ -1,0 +1,49 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+#loading-spinner {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    background: linear-gradient(to top left, v.$second-clr, v.$first-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: progress-background-spinner 1000ms 2800ms forwards;
+    @include m.desktop-only {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    & .logo-spinner {
+        color: v.$alternate-text-clr;
+        font-family: 'Shrikhand';
+        font-size: 50px;
+        visibility: visible;
+        animation: progress-logo-spinner 700ms 600ms forwards;
+    }
+    & .spinner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30px;
+        height: 10px;
+        background-color: v.$alternate-text-clr;
+        visibility: hidden;
+        animation: progress-spinner-animation 800ms 1200ms forwards;
+        & .fork {
+            background-color: v.$alternate-text-clr;
+            width: 4px;
+            height: 40px;
+            animation: progress-fork-prong 900ms 1900ms forwards;
+            &__tiny {
+                background-color: v.$alternate-text-clr;
+                width: 4px;
+                height: 60px;
+                animation: progress-little-fork-prong 900ms 1900ms forwards;
+            }
+        }
+    }
+}

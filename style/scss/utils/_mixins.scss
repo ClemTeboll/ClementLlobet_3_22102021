@@ -1,0 +1,65 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+
+
+@mixin section-padding-top-and-bottom {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin general-padding {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+@mixin cursor {
+    cursor: pointer;
+}
+
+@mixin card-box-shadow {
+    box-shadow: 0px 5px 10px v.$shadow-clr;
+}
+
+@mixin lighten-first-clr($color: f.manage-color(v.$first-clr, v.$light-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
+    background-color: $color;
+}
+
+@mixin darken-third-clr($color: f.manage-color(v.$third-clr, v.$dark-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
+    color: $color;
+}
+
+@mixin lighten-dark-clr($color: f.manage-color(v.$dark-clr, v.$shadow-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
+    background-color: $color;
+}
+
+@mixin darken-dark-clr($color: f.manage-color(v.$dark-clr, v.$dark-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
+    background-color: $color;
+}
+
+@mixin shadow-clr($color: f.manage-color(v.$dark-clr, v.$shadow-brightness, v.$first-percentage, v.$second-percentage, v.$third-percentage, v.$fourth-percentage)) {
+    box-shadow: 0px 5px 10px $color;
+}
+
+@mixin ellipsis-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: v.$tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media screen and (min-width: v.$mobile-breakpoint) and (max-width: v.$tablet-breakpoint) {
+        @content;
+    }
+}

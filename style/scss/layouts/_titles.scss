@@ -1,0 +1,51 @@
+@use '../utils/mixins' as m;
+
+h2 {
+    font-weight: bold;
+    font-size: x-large;
+    line-height: 1.2;
+    &.h2-welcome-page {
+        @include m.section-padding-top-and-bottom;
+        @include m.desktop-only {
+            width: 100%;
+            text-align: center;
+        }
+        @include m.tablet-only {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &.h2-title-menu-page {
+        font-family: 'Shrikhand';
+        font-size: 30px;
+    }
+}
+
+h3 {
+    font-size: 18px;
+    &.h3-welcome-page {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    &.h3-menu-page {
+        font-weight: lighter;
+        text-transform: uppercase;
+        @include m.desktop-only {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        @include m.tablet-only {
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+    } 
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    @include m.ellipsis-text;
+}

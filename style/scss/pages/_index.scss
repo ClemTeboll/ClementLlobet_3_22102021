@@ -1,0 +1,53 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m;
+
+.welcome-restaurant-operation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    @include m.desktop-only {
+        width: 100%;
+        padding-left: 2%;
+    }
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: v.$first-clr;
+        color: v.$alternate-text-clr;
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -10px;
+        font-size: 12px;
+        @include m.desktop-only {
+            left: -5px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        @include m.darken-dark-clr;
+        padding: 6% 0% 6% 5%;
+        border-radius: 20px;
+        @include m.card-box-shadow;
+        &.store {
+            @include m.lighten-first-clr;
+        }
+        & i {
+            width: 50px;
+            margin-left: 5px;
+            font-size: 20px;
+            &.fa-store {
+                color: v.$first-clr;
+            }
+        }
+    }
+}

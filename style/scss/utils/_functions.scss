@@ -1,0 +1,22 @@
+@function manage-color(
+        $color, 
+        $brightness, 
+        $first-percentage, 
+        $second-percentage, 
+        $third-percentage, 
+        $fourth-percentage
+    ) {
+        @if (lightness($color) > $first-percentage) {
+            @if ($brightness == light) {
+                @return lighten($color, $second-percentage);
+            } @else {
+                @return darken($color, $second-percentage);
+            }
+        } @else {
+            @if ($brightness == shadowed) {
+                @return lighten($color, $third-percentage);
+            } @else {
+                @return lighten($color, $fourth-percentage);
+            }
+        }
+}
