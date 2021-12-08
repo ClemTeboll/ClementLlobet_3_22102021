@@ -1,4 +1,5 @@
 @use './variables' as v;
+@use './mixins' as m;
 
 @keyframes progress-logo-spinner {
     0% {
@@ -72,6 +73,26 @@
     100% {
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+@keyframes color-working-restaurant {
+    from {
+        @include m.darken-dark-clr;
+    }
+    to {
+        @include m.lighten-first-clr;
+        @include m.card-box-shadow
+    }
+}
+
+@keyframes end-color-working-restaurant {
+    from {
+        @include m.lighten-first-clr;
+        @include m.card-box-shadow
+    }
+    to {
+        @include m.darken-dark-clr;
     }
 }
 

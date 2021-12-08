@@ -38,8 +38,10 @@
         padding: 6% 0% 6% 5%;
         border-radius: 20px;
         @include m.card-box-shadow;
-        &.store {
-            @include m.lighten-first-clr;
+        animation: end-color-working-restaurant 500ms forwards;
+        &:hover {
+            cursor: pointer;
+            animation: color-working-restaurant 500ms forwards;
         }
         & i {
             width: 50px;
